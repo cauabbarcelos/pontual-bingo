@@ -19,6 +19,7 @@ export const navLinks: NavLink[] = [
   { label: "Serviços", href: "#servicos" },
   { label: "Modelos", href: "#modelos" },
   { label: "Como funciona", href: "#como-funciona" },
+  { label: "Avaliações", href: "#avaliacoes" },
   { label: "Dúvidas", href: "#duvidas" },
 ];
 
@@ -128,6 +129,68 @@ export const faqItems: FaqItem[] = [
       "Sim! Atendemos empresas, igrejas, escolas, confraternizações e eventos em geral, com produção personalizada para cada tipo de ação.",
   },
 ];
+
+export type TestimonialEventType = "empresa" | "aniversario";
+
+export type Testimonial = {
+  name: string;
+  role: string;
+  eventType: TestimonialEventType;
+  quote: string;
+};
+
+export const testimonials: Testimonial[] = [
+  {
+    name: "Mariana Duarte",
+    role: "Analista de RH",
+    eventType: "empresa",
+    quote:
+      "Contratamos a Pontual para o bingo da confraternização da empresa e as cartelas personalizadas com a nossa logo ficaram incríveis. Qualidade impecável e atendimento super ágil!",
+  },
+  {
+    name: "Carlos Henrique",
+    role: "Festa em família",
+    eventType: "aniversario",
+    quote:
+      "Organizei o bingo do aniversário de 60 anos da minha mãe. As cartelas com o tema da festa emocionaram todo mundo e chegaram antes do prazo. Nota 10!",
+  },
+  {
+    name: "Fernanda Costa",
+    role: "Coordenadora de eventos",
+    eventType: "empresa",
+    quote:
+      "Usamos as cartelas no evento de fim de ano com mais de 300 colaboradores. O bingo duplo foi um sucesso e a equipe nos ajudou do início ao fim.",
+  },
+  {
+    name: "Patrícia Mendes",
+    role: "Festa infantil",
+    eventType: "aniversario",
+    quote:
+      "As cartelas do aniversário da minha filha ficaram um encanto, com as cores exatas do tema. As crianças amaram e os convidados elogiaram demais. Voltarei a contratar!",
+  },
+  {
+    name: "Roberto Almeida",
+    role: "Organizador de eventos",
+    eventType: "empresa",
+    quote:
+      "Precisávamos de cartelas com QR Code para o sorteio da nossa empresa. A Pontual entregou exatamente o que pedimos, com agilidade e ótimo acabamento.",
+  },
+  {
+    name: "Juliana Ferreira",
+    role: "Festa particular",
+    eventType: "aniversario",
+    quote:
+      "Contratei para o meu aniversário de 30 anos e superou as expectativas: arte linda, material de qualidade e preço justo. Recomendo de olhos fechados!",
+  },
+];
+
+/** Resumo da avaliação média exibido na seção de depoimentos. */
+export const testimonialSummary = {
+  rating: "5,0",
+  scaleLabel: "de 5",
+  description:
+    "Avaliação média de clientes de empresas, igrejas e festas de aniversário",
+} as const;
 
 export type FooterValue = { icon: LucideIcon; label: string };
 

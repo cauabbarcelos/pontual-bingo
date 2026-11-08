@@ -6,6 +6,7 @@ import { HeroSection } from "@/components/site/hero-section";
 import { HowItWorksSection } from "@/components/site/how-it-works-section";
 import { SiteFooter } from "@/components/site/site-footer";
 import { SiteHeader } from "@/components/site/site-header";
+import { TestimonialsSection } from "@/components/site/testimonials-section";
 import { WhatsAppFloatButton } from "@/components/site/whatsapp-float-button";
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
         <DifferentialsBar />
         <BingoModelsSection />
         <HowItWorksSection />
+        <TestimonialsSection />
         <FaqSection />
         <FinalCtaSection />
       </main>
