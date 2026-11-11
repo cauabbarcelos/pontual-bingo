@@ -43,21 +43,49 @@ export type BingoModel = {
 export const bingoModels: BingoModel[] = [
   {
     id: "bingo-simples",
-    name: "Bingo Simples",
+    name: "Chance Simples",
     description: "Uma cartela por jogador, ideal para eventos menores.",
     cards: 1,
   },
   {
     id: "bingo-duplo",
-    name: "Bingo Duplo",
+    name: "Chance Dupla",
     description: "Duas cartelas por jogador, mais chances de ganhar!",
     cards: 2,
   },
   {
     id: "bingo-triplo",
-    name: "Bingo Triplo",
+    name: "Chance Tripla",
     description: "Três cartelas por jogador, aumente a emoção!",
     cards: 3,
+  },
+];
+
+export type RaffleModel = {
+  id: string;
+  name: string;
+  description: string;
+  tickets: 1 | 2 | 3;
+};
+
+export const raffleModels: RaffleModel[] = [
+  {
+    id: "rifa-simples",
+    name: "Rifa Simples",
+    description: "Um modelo prático para organizar sua ação.",
+    tickets: 1,
+  },
+  {
+    id: "rifa-dupla",
+    name: "Rifa Dupla",
+    description: "Duas opções de cartela para sua campanha.",
+    tickets: 2,
+  },
+  {
+    id: "rifa-tripla",
+    name: "Rifa Tripla",
+    description: "Três opções para deixar sua rifa ainda mais completa.",
+    tickets: 3,
   },
 ];
 
@@ -183,14 +211,6 @@ export const testimonials: Testimonial[] = [
       "Contratei para o meu aniversário de 30 anos e superou as expectativas: arte linda, material de qualidade e preço justo. Recomendo de olhos fechados!",
   },
 ];
-
-/** Resumo da avaliação média exibido na seção de depoimentos. */
-export const testimonialSummary = {
-  rating: "5,0",
-  scaleLabel: "de 5",
-  description:
-    "Avaliação média de clientes de empresas, igrejas e festas de aniversário",
-} as const;
 
 export type FooterValue = { icon: LucideIcon; label: string };
 

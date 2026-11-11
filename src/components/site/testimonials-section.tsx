@@ -1,7 +1,6 @@
 import { Building2, Cake, Quote, Star } from "lucide-react";
 import {
   testimonials,
-  testimonialSummary,
   type Testimonial,
   type TestimonialEventType,
 } from "@/data/content";
@@ -132,27 +131,6 @@ export function TestimonialsSection() {
           title="Quem contratou, recomenda!"
           description="Depoimentos de quem fez o bingo da empresa ou da festa de aniversário com a Pontual."
         />
-
-        {/* Resumo da avaliação média */}
-        <Reveal delay={0.1}>
-          <div className="mx-auto mt-9 flex w-fit max-w-full flex-col items-center gap-3 rounded-2xl border border-slate-200 bg-white px-7 py-5 shadow-sm sm:flex-row sm:gap-5">
-            <div className="flex items-baseline gap-2">
-              <span className="font-display text-5xl font-extrabold leading-none text-brand-navy">
-                {testimonialSummary.rating}
-              </span>
-              <span className="text-sm font-semibold text-slate-400">
-                {testimonialSummary.scaleLabel}
-              </span>
-            </div>
-            <span aria-hidden="true" className="hidden h-10 w-px bg-slate-200 sm:block" />
-            <div className="flex flex-col items-center gap-1.5 sm:items-start">
-              <StarRow />
-              <p className="max-w-64 text-center text-xs font-semibold leading-snug text-slate-500 sm:text-left">
-                {testimonialSummary.description}
-              </p>
-            </div>
-          </div>
-        </Reveal>
 
         {/* Grade de depoimentos */}
         <div className="mt-12 grid gap-6 sm:mt-14 md:grid-cols-2 lg:grid-cols-3">
